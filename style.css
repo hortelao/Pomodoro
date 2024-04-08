@@ -1,0 +1,70 @@
+body {
+    background-color: #31363F;
+    text-align: center;
+    padding-top: 50px;
+}
+
+h1 {
+    color: #8e8f90;
+}
+
+
+
+#timer {
+    color: #EEEEEE;
+    font-size: 48px;
+}
+
+.btn {
+    color: #EEEEEE;
+}
+.btn:hover {
+    color: #8d8c8c;
+}
+
+#pauseBtn {
+    display: none;
+}
+
+.progress-circle {
+    margin: 20px auto;
+    width: 400px;
+    height: 140px;
+}
+
+.progress-circle svg {
+    transform: rotate(-180deg);
+}
+
+.progress-circle circle {
+    fill: none;
+    stroke-width: 10;
+}
+
+.progress-circle .bar {
+    fill: none;
+    stroke: #76ABAE;
+    stroke-width: 5;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.5s;
+}
+
+.space {
+    position:relative;
+    top: 120px;
+}
+
+.btn-primary {
+    background-color: #76ABAE;
+    color: #ffffff;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px 0;
+  }
+

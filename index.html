@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="text">Pomodoro Timer</h1>
+        <div class="progress-circle">
+            
+            <svg viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="40"></circle>
+                <path id="progressBar" class="bar" stroke-dasharray="251.2" stroke-dashoffset="0" d="M50 10
+                  a 40 40 0 0 1 0 80
+                  a 40 40 0 0 1 0 -80"></path>
+            </svg>
+            
+        </div>
+        
+        <div id="timer">25:00</div>
+        <div class="btn-group mt-3" role="group">
+            <button id="startBtn" type="button" class="btn">Start</button>
+            <button id="pauseBtn" type="button" class="btn">Pause</button>
+            <button id="resetBtn" type="button" class="btn">Reset</button>
+        </div>
+        
+    </div>
+    
+    <div class="space">
+        <div class="container">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Settings
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-6" id="exampleModalLabel">Setup my Pomodoro</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+                        </div>
+                        <div class="modal-body">
+
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1">Pomodoro</span>
+                                <input type="number" id="pomodoro" value=25 class="form-control" placeholder="Pomodoro" aria-label="Pomodoro" aria-describedby="basic-addon1">
+                                <span class="input-group-text" id="basic-addon1">Short Break</span>
+                                <input type="number" id="short" value=5 class="form-control" placeholder="Short Break" aria-label="Short Break" aria-describedby="basic-addon1">
+                                <span class="input-group-text" id="basic-addon1">Long Break</span>
+                                <input type="number" id="long" value=15 class="form-control" placeholder="Long Break" aria-label="Long Break" aria-describedby="basic-addon1">
+                                <audio id="myAudio">
+                                    <source src="ring.mp3" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                  </audio>
+                            </div>
+                          
+                              
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" id="saveSettings" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container text-center">
+          <p class="mb-0">Made by <a href="https://www.andrehortelao.com">André Hortelão</a></p>
+
+        </div>
+      </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
