@@ -28,6 +28,9 @@ function pauseTimer() {
 }
 
 function resetTimer() {
+    pomodoro = document.getElementById("pomodoro").value * 60;
+    totalTime = document.getElementById("pomodoro").value * 60;
+    remainingTime = document.getElementById("pomodoro").value * 60;
     fase = 0;
     document.getElementById("progressBar").style.stroke = "#76ABAE";
     document.getElementById("text").textContent = "Pomodoro Timer";
